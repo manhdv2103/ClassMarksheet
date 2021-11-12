@@ -1,0 +1,87 @@
+html,
+body {
+    height: 100%;
+    color: black;
+    font: 16px "Roboto", sans-serif;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#toolbar-toggle.collapsed {
+    display: block !important;
+}
+
+#toolbar-toggle .fas {
+    transition: transform 0.25s ease-in-out;
+}
+
+#toolbar-toggle.collapsed .fas {
+    transform: rotate(-180deg);
+}
+
+.tool-item > a {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.table-container {
+    height: 120px;
+    background-color: var(--bs-gray-100);
+    border-top: 1px solid var(--bs-gray-400);
+    border-bottom: 1px solid var(--bs-gray-400);
+}
+
+/* Bảng điểm */
+
+#test-score-table {
+    max-width: 1500px;
+}
+
+#test-score-table td {
+    vertical-align: middle;
+}
+
+#test-score-table tr.excellent-student {
+    background-color: #1cbd1c;
+    color: #fff;
+}
+
+#test-score-table.sort-mode th,
+#test-score-table.filter-mode th {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#test-score-table.sort-mode th[class*="sort-"] .fa-caret-up,
+#test-score-table.filter-mode th.filtered .fa-caret-up {
+    display: block !important;
+}
+
+#test-score-table.sort-mode th.sort-desc .fa-caret-up {
+    transform: rotate(180deg);
+}
+
+/* Đổi icon mũi tên thành icon phễu khi ở chế độ lọc */
+#test-score-table.filter-mode th .fa-caret-up::before {
+    content: "\f0b0";
+}
+
+#test-score-table.filter-mode th .fa-caret-up {
+    color: #1cbd1c;
+}
+
+#test-score-table th.filtering {
+    background-color: rgba(29, 191, 29, 0.2);
+}
+
+#test-score-table.delete-mode > tbody > tr:hover {
+    --bs-table-accent-bg: rgba(220, 53, 70, 0.3);
+}

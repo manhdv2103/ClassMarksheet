@@ -1,0 +1,52 @@
+@media (hover: hover) and (pointer: fine) {
+    .tool-item > a:hover,
+    #toolbar-toggle:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    #test-score-table.edit-mode td:nth-of-type(n + 2):nth-of-type(-n + 5):hover,
+    #test-score-table.sort-mode th:hover,
+    #test-score-table.filter-mode th:hover {
+        --bs-table-accent-bg: var(--bs-table-hover-bg);
+    }
+
+    #test-score-table.edit-mode td:nth-of-type(n + 2):nth-of-type(-n + 5):hover {
+        cursor: text;
+    }
+
+    #test-score-table.delete-mode > tbody > tr:hover,
+    #test-score-table.sort-mode th:hover,
+    #test-score-table.filter-mode th:hover {
+        cursor: pointer;
+    }
+}
+
+@media all and (min-width: 768px) {
+    button.btn {
+        width: auto !important;
+    }
+
+    label.col-form-label {
+        line-height: 1;
+    }
+
+    .tool-item .fas {
+        font-size: 1.3em;
+    }
+
+    #tool-container {
+        height: 180px;
+    }
+
+    .tool-pane {
+        height: 100%;
+    }
+
+    #to-top-btn {
+        position: absolute;
+        height: auto !important;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
