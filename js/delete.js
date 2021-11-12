@@ -22,7 +22,7 @@ function deleteTestScore() {
     let deleteIndex = Number(deleteRow.children('td').eq(STT_INDEX).text());
     let deleteName = deleteRow.children('td').eq(NAME_INDEX).text();
 
-    if (prompt(`Nhập "YES" để xác nhận xóa học sinh ${deleteName}`) === 'YES') {
+    if (prompt(`Nhập "CONFIRM" để xác nhận xóa học sinh ${deleteName}`) === 'CONFIRM') {
         // Đánh lại số thứ tự trước khi xóa
         tableBody
             .children('tr')
